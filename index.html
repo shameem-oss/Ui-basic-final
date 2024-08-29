@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5ec6ee5329.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.google.com/">
+
+    <title>Document</title>
+
+<style>
+    @font-face {
+    src: url(./static/DancingScript-Bold.ttf);
+    font-family:pinky;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: lightpink ;
+   
+}
+.newslatter{
+    height: 5%;
+    width: 100%;
+    background: linear-gradient(to right, white, lightpink);  
+      position: relative;
+    display: flex;  
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    color: white;
+    top: 0;
+    font-size: 2rem;
+    flex-wrap: wrap;
+
+    
+
+}
+.newslatter a{
+    text-decoration: none;
+ animation: Change 1s infinite;   
+}
+
+@keyframes Change {
+    0% {
+        color:white;
+    }
+    50% {
+        color:white;
+    }
+    100% {
+        color: red;
+    }
+}
+.newslatter p:hover{
+    transform: translatex(10px);
+    transition-duration: 1s ease;
+}
+
+
+.header{
+    height: 20%;
+    width: 90%;
+    background-color:lightpink ;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;  
+  align-items: center;
+  justify-content: space-around;
+        
+}
+.header i{
+    color: white;
+    margin-top: 120px;
+    font-size: 2rem;
+}
+.header h1{
+font-family:pinky;
+color: #e662ab;
+font-size: 7rem;
+display: flex;
+text-align: center;
+
+
+}
+.social{
+    font-family:pinky;
+color: #e662ab;
+font-size: 6rem;
+}
+
+
+.navbar {
+    height: 10%;
+    position: relative;
+  overflow: hidden;
+  background-color: lightpink ; 
+  display: flex;
+  justify-content: center;
+flex-wrap: wrap;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: purple;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+    font-size: 2rem; 
+     border: none;
+  outline: none;
+  color: purple;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #e662ab;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #F7B5CA;
+  width: 100vw;
+  z-index: 1;
+  
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #e662ab;
+  color: black;
+ 
+}
+
+.subnav:hover .subnav-content {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.shop-now{
+    position: relative;
+   height: auto;
+    background-color: #F0A8D0;
+    display: flex;
+    background: linear-gradient(to right, white, lightpink);
+
+    gap: 10px; 
+    font-size: 2rem;
+    flex-wrap: wrap;
+
+}
+
+
+.cart-1, .cart-2, .cart-3, .cart-4{
+    position: relative;
+    height: auto;
+    width: 24%;
+}
+.cart-1 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+justify-items: center; 
+color: black;
+flex-wrap: wrap;
+}
+
+.shop-now span{
+    font-family: pinky;
+    font-size: 4rem;
+}
+.cart-1 button{
+font-size: 2rem; display: flex;
+    align-self: center;
+    text-align: center;
+    padding-left: 10px;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 2%;
+
+}
+.shop-now img {
+position: absolute;
+ width: 100%;
+    height: 90%;
+object-fit: cover;    
+    top: 0;
+    left: 0;
+    border-radius: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2%;
+}
+
+.shop-now h4{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    font-size: 3rem;
+}
+
+.shop-now h4:hover{
+    transform: translateX(100px);
+    transition-duration: 2s;
+    background-color: rgba(79, 82, 82, 0.5); /* Light blue with 50% transparency */
+    height: 100%;
+    width: 100%;
+    border-radius: 40%;
+    opacity: 1;
+}
+.shop-now a{
+    text-decoration: none;
+}
+
+.flash-sales{
+    position: relative;
+   height: 30%;
+   width: 100%;
+   display: flex;
+   float: row;
+    font-size: 2rem; 
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  flex-wrap: wrap;
+}
+.cart3, .cart4, .cart5{
+    height: 90%;
+    width: 25%;
+    position: relative;
+    background-color: #e662ab15;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 80% 50% 70% 30%;  
+      transition: 0.3s ease-in-out; /* Smooth transition for shadow effect */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+}
+
+.flash-sales img {
+    height: 100%;
+    width: 90%;
+    position: relative;          
+    border-radius: 80% 50% 70% 30%;
+object-fit: cover;}
+
+
+.flash-sales a{
+text-decoration: none;
+color: purple;
+font-size: 2rem;
+margin: 0%;
+padding: 0%;
+
+}
+.flash-sales img {
+    animation: slideAnimation 1s infinite;
+}
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(0%); }
+    34% { transform: translateX(-1%); }
+    66% { transform: translateX(-1%); }
+    67% { transform: translateX(-1%); }
+    100% { transform: translateX(0%); }
+}
+
+.footer {
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ; 
+    grid-template-rows: 1fr 1fr 1fr ; 
+    gap: 10px; 
+    font-size: 2rem;
+    padding-top: 100px;
+    background: linear-gradient(to right, white, lightpink);
+    margin-top: 5%;}
+
+.contact, .p, .social {
+    display: flex ;
+    flex-direction: column;
+    text-align: left;
+    flex-wrap: wrap;
+}
+.icon-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+.icon i{
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+.footer a{
+    text-decoration: none;
+}
+.p {
+    font-family: monospace;
+    padding-top: 5%;
+    font-size: larger;
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+.p span{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.contact {
+    padding-left: 20px;
+    padding-top: 5%;
+
+}
+.contact ul li{
+    list-style: none;
+    text-decoration: none;
+}
+.contact a{
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+
+}
+.contact a:hover{
+    color: pink;
+}
+
+.subscribe{
+    height: 30%;
+    width: 100%;
+    background-color: #F0A8D0;
+    background: linear-gradient(to right, white, lightpink);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+font-family: monospace;
+flex-wrap: wrap;
+}
+.subscribe h1{
+    font-size:80px;
+}
+.subscribe p{
+    font-size: 30px;
+}
+
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #f7b5ca73;
+  
+    flex-wrap: wrap;
+   
+}
+.banner .text-content, .banner .image-container, .banner .discount-info {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+.text-content {
+    flex: 1;
+    color: #FFFFFF;
+}
+
+.text-content h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.text-content .small-text {
+    font-size: 5em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    font-family: monospace;
+}
+
+.text-content .large-text {
+    font-size: 4em;
+    margin: 0;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.sale-text {    
+
+    font-size: 7em;
+    font-weight: bold;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    transform: rotate(90deg);
+    color: #FFFFFF;
+    
+    animation: colorChange 3s infinite;
+
+}
+.sale img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+@keyframes colorChange {
+    0% {
+        color:pink;
+    }
+    50% {
+        color:purple;
+    }
+    100% {
+        color: gray;
+    }
+}
+.image-container {
+    flex: 1;
+    margin: 0 20px;
+}
+.image-container h1 {
+    font-family: monospace;
+    font-size: 5em;
+    float: left;
+}
+.image-container p {
+    font-family: monospace;
+    font-size: 5em;
+    float: right;
+}
+.image-container img {
+    width: 90%;
+    height: 50%;
+    border-radius: 15px;
+    transform: scale(1);
+    animation: zoomIn 3s infinite;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.discount-info {
+    color: #FFFFFF;
+    text-align: right;
+    display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+.discount-info h2 {
+    font-size: 7em;
+    margin: 0;
+    color: #FFFFFF;
+    animation: colorChange 3s infinite;
+    display: flex;
+    flex-wrap: wrap;
+}
+@keyframes colorChange {
+    0% {
+        color:pink;
+    }
+    50% {
+        color:white;
+    }
+    100% {
+        color: purple;
+    }
+}
+
+.discount-info p {
+    font-size: 3em;
+    margin: 5px 0;
+    color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.sale {
+    position: relative;
+   height: 50%;
+     display: grid;
+    grid-template-columns: 1fr 1fr 1fr ; 
+    grid-template-rows: 1fr 1fr 1fr ; 
+    gap: 1%; 
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    flex-wrap: nowrap;
+}
+.cart img {
+    object-fit: cover;
+    height: 80%;
+    width: 100%;
+    position: relative;          
+}
+.sale h1{
+font-family: monospace;
+font-size: 100px;
+}
+.free-shipping{
+    width: 100%;
+    position: relative;
+    height: auto;
+    font-size: 2rem;
+    display: flex;
+justify-content: right; 
+    flex-wrap: nowrap;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.free1 {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    
+}
+.free1 h2 {
+    font-family: monospace;
+    color: pink;
+
+}
+.free1 span {
+    color: #e662ab;
+}
+.free2 {
+    height: auto;
+    width: 40%;
+    text-align: center;
+}
+.free2 h1{
+    font-family: monospace;
+    color: black;
+       font-style: italic;
+       font-size: 3.5rem;
+
+}
+.free2 h3{
+   color: black;
+   border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid black;
+    padding-bottom: 20px; 
+    display: inline-block;
+    padding-top: 5%;
+}
+.free2 button{
+    background-color:white;
+    color: #fcd2df;
+    font-family: monospace;
+    font-size: 50px;
+    border: none;
+    
+}
+.free3 {
+    height: 100%;
+    width: 30%;
+}
+.free3 img{
+    position: relative;
+    object-fit: cover;
+    height: auto;
+    width: 70%;
+    border-radius: 100px 5px 100px 0;
+
+}
+
+@media (max-width: 768px) {
+        .header h1 {
+            font-size: 2rem;
+        }
+        .shop-now span, .banner .sale-text {
+            font-size: 2rem;
+        }
+        .flash-sales img {
+            border-radius: 50%;
+        }
+        .subscribe h1 {
+            font-size: 1.5rem;
+        }
+        .subscribe p {
+            font-size: 1rem;
+        }
+        .sale-text p {
+            font-size: 10px;
+           
+        }
+        .discount-info h2{
+            font-size: 10px;
+           
+        }
+     
+        
+    } 
+    @media (max-width: 480px) {
+        .newslatter, .navbar, .header, .shop-now, .flash-sales, .sale, .free-shipping, .footer {
+            flex-direction: column;
+            padding: 10px;
+        }
+        .navbar a, .subnavbtn {
+            font-size: 1.2rem;
+        }
+        .shop-now span {
+            font-size: 1.2rem;
+        }
+        .shop-now img {
+            border-radius: 5%;
+        }
+        .flash-sales img {
+            border-radius: 20%;
+        }
+        .sale img {
+            border-radius: 10px;
+        }
+        .icon-list i{
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            padding-right: 10px;
+
+        }
+       
+        }
+    
+
+
+    
+</style>
+
+
+
+
+
+
+</head>
+<body>
+      <div class="newslatter">
+        <a href="index.html"><p>Save 15% on order over 50$ <i class="fa-solid fa-heart"></i> Use code 15Off at checkout <i class="fa-solid fa-arrow-right"></i></a></p>
+      </div>
+
+
+      <div class="header">
+      <span>
+        
+        <a href=""><i class="fa-solid fa-magnifying-glass"> <input type="text" class="search-box" placeholder="Search..." style="font-size: 2rem;">
+            <label for="search-box" ></label></i></a></span> 
+      <span><h1> Pinky Shop <br> boho </h1></span> 
+      <span><a href=""><i class="fa-solid fa-message"></i></a></span> 
+
+      </div>
+
+
+      
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <div class="subnav">
+          <button class="subnavbtn">Shop All <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="#company">Women</a>
+            <a href="#team">Children</a>
+          </div> 
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn">Contact </button>
+        
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn">Blog </button>
+        </div>
+       
+       
+    </div>
+
+
+      <div class="shop-now">
+        <div class="cart-1"><p> <span>Shop our</span> <br><h1>Spring collection</h1> be the first to shop <br> just-dropped new arrivels</p> <button><a href="https://www.zara.com/de/en/">Shop now</a></button></div>
+        <div class="cart-2"><img src="./img/1000_F_632980519_ICzYI5D1L5QgyUTQKsNg6ou7m3lF0OtI.jpg" alt=""><h4>Women</h4></div>
+        <div class="cart-3"><img src="./img/1000_F_755421006_FKO7KgFx9bSKdeALXpnMwXhz9O3iL5py.jpg" alt=""><h4>Beauty</h4></div>
+        <div class="cart-4"><img src="./img/1000_F_916625151_Zhn7Ks3jdgTM18E1TCtAstocut0wV88h.jpg" alt=""><h4>Babys</h4></div>
+
+      </div>
+
+
+      <div class="flash-sales">
+        <div class="cart3"><img src="./img/ffff.jpg" alt=""><h4><a href="">New arrivel </a></h4></div>
+        <div class="cart4"><img src="./img/1000_F_884908489_72Fh69VPrS1G9Pwj4K5lSxojSFppzGbq.jpg" alt=""><h4><a href="">Sale items </a></h4></div>
+        <div class="cart5"><img src="./img/1000_F_893959295_W44oRGpzSL3ZCFj73xfDbzmiGFAOIquV.jpg" alt=""><h4><a href="">Hot deals</a></h4></div>
+
+      </div>
+
+
+      <div class="subscribe">
+      <h1>Subscribe to our Emails <br></h1> <p>Be the first to know about new collection and exclusive offers. </p>   
+      <form action="post">
+        <input type="email" name="email" id="" placeholder="Email..." style="height: 100px; width: 700px; font-size: xx-large;   background: linear-gradient(to right, white, lightpink);
+ padding-left: 15px;"> 
+    </form>
+    
+    </div>
+
+
+
+      <div class="banner">
+        <div class="text-content">
+            
+            <p class="small-text">Ultimate discounts <br>on November 26 only!</p>
+           
+            <p class="sale-text">SALE</p>
+        </div>
+        <div class="image-container">
+           <h1>END OF SEASON</h1> <img src="./img/almas-website-banner-1.webp" alt="Necklace"> <p class="large-text">MEGA</p>
+        </div>
+        <div class="discount-info">
+            <p>Up to</p>
+            <h2>75% Off </h2><i class="fa-solid fa-arrow-right" style="font-size: 100px;"></i>
+            <p>On selected items.</p>
+        </div>
+      </div>
+
+
+      <div class="sale">
+      <h1>Sale <i class="fa-brands fa-salesforce"></i> </h1>  
+       <div class="cart"><a href="https://www.zara.com/de/en/search?searchTerm=sale&section=WOMAN"><img src="./img/108f4bc6095390e65c785ac381f29f1e9458a13f.avif" alt=""></a><p>Jasmin Suit</p><h4>55.00$ Dollor</h4></div>
+        <div class="cart"><a href=""><img src="./img/female-ecru-maternity-linen-strappy-maxi-dress.jpeg" alt=""></a><p>Anna Dress</p><h4>79.00$ Dollor</h4></div>
+        <div class="cart"><a href=""><img src="./img/Hucklebones-London-Baby-Girls-EID-Purple-Satin-Ruffle-Summer-Party-Dress.jpg" alt=""></a><p>Baby joni</p><h4>35.00$ Dollor</h4></div>
+
+      </div>
+
+
+      <div class="free-shipping">
+      <div class="free1"><h2>Free Shipping Free ShippingFree Shipping <br>
+       <span> Free ShippingFree Shipping Free Shipping </span>
+        <br>Free ShippingFree Shipping Free Shipping <br><span>
+        Free ShippingFree ShippingFree Shipping </span></h2></div>
+      <div class="free2"><h1>Buy 2 items for free shipping .</h1><br><h3>Promo Code:YOURS</h3><br>
+        <button>Shop Now <i class="fa-solid fa-angle-right"></i></button>
+    
+    </div>
+      <div class="free3">
+        <img src="./img/pic.jpg" alt="">
+      </div>
+
+
+
+
+      </div>
+
+
+      <div class="footer">
+       
+         <div class="contact">
+            <h2>Quick Links</h2>
+            <ul >
+                <li><a href="">Search</a></li><br>
+                <li><a href="">FAQ</a></li><br>
+                <li><a href="">Contact us</a></li>
+            </ul>
+            <h2>Subscribe to our emails</h2>
+            <form action="post">
+            <input type="email" name="email" id="" placeholder="Email..." style="height: 100px; width: 90%; font-size: xx-large;  background: linear-gradient(to right, white, lightpink);padding-left: 15px;"> 
+        </form>
+         </div>
+         <div class="p"><h1>Our Mission</h1> <br>Our designs are made for you <br>and give the freedome that express your self <br> through fashion. 
+             <br><br><br><br><br><br><br><br><br><br><br><span>@2024 pinkbohostore powerd by shopify.</span>  </div>
+      
+         <div class="social">
+        <h2 >Pinky <br>boho</h2>
+        
+        <!-- footer links -->
+        <ul class="icon-list">
+            <li class="icon"><a href=""><i class="fa-brands fa-facebook" ></i></a></li>
+            <li class="icon"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="icon"><a href=""><i class="fa-brands fa-invision"></i></a></li>
+            <li class="icon"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            <li class="icon"><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+
+        </li>
+
+         </ul></div>
+
+      </div>
+
+
+</body>
+</html>
